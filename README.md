@@ -1,2 +1,3 @@
-# vibervn-bot-releases
-ViberVN Bot installers for Windows, macOS and Linux
+# ViberVN Bot
+
+Downloads and install guide: https://get.viber.vn

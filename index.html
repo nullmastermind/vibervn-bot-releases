@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ViberVN Bot</title>
+<style>
+  :root { color-scheme: light dark; --fg: #1a1a1a; --muted: #5c5c5c; --bg: #fafafa; --card: #fff; --line: #e3e3e3; --accent: #6d4aff; }
+  @media (prefers-color-scheme: dark) { :root { --fg: #ececec; --muted: #a0a0a0; --bg: #141414; --card: #1d1d1d; --line: #2e2e2e; } }
+  * { box-sizing: border-box; }
+  body { margin: 0; font: 16px/1.6 system-ui, -apple-system, "Segoe UI", sans-serif; color: var(--fg); background: var(--bg); }
+  main { max-width: 760px; margin: 0 auto; padding: 56px 20px 80px; }
+  h1 { font-size: 2.2rem; margin: 0 0 4px; }
+  h2 { font-size: 1.25rem; margin: 40px 0 12px; }
+  p.lead { color: var(--muted); margin: 0 0 32px; }
+  .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 12px; }
+  a.dl { display: block; padding: 16px; border: 1px solid var(--line); border-radius: 12px; background: var(--card); color: inherit; text-decoration: none; }
+  a.dl:hover { border-color: var(--accent); }
+  a.dl strong { display: block; }
+  a.dl span { color: var(--muted); font-size: .9rem; }
+  code { font: .88rem ui-monospace, SFMono-Regular, Consolas, monospace; background: var(--card); border: 1px solid var(--line); border-radius: 6px; padding: 2px 6px; word-break: break-all; }
+  section { border-top: 1px solid var(--line); }
+  footer { margin-top: 48px; color: var(--muted); font-size: .9rem; }
+  a { color: var(--accent); }
+</style>
+</head>
+<body>
+<main>
+  <h1>ViberVN Bot</h1>
+  <p class="lead">Trợ lý AI cá nhân chạy trên máy của bạn: desktop, terminal và các nền tảng nhắn tin.</p>
+
+  <h2 id="download">Tải về</h2>
+  <div class="grid">
+    <a class="dl" href="/download/windows"><strong>Windows 11 (x64)</strong><span>.msix — cần thêm chứng chỉ bên dưới</span></a>
+    <a class="dl" href="/download/windows-cert"><strong>Chứng chỉ Windows</strong><span>ViberVN-signing.cer</span></a>
+    <a class="dl" href="/download/mac-arm64"><strong>macOS Apple Silicon</strong><span>.dmg (M1 trở lên)</span></a>
+    <a class="dl" href="/download/mac-x64"><strong>macOS Intel</strong><span>.dmg</span></a>
+    <a class="dl" href="/download/linux-x64"><strong>Linux x86_64</strong><span>.AppImage</span></a>
+    <a class="dl" href="/download/linux-arm64"><strong>Linux arm64</strong><span>.AppImage</span></a>
+  </div>
+  <p><a href="https://github.com/nullmastermind/vibervn-bot-releases/releases">Tất cả phiên bản và ghi chú phát hành</a></p>
+
+  <section>
+    <h2 id="install">Cài đặt</h2>
+    <p>Bộ cài chưa được ký bởi nhà phát hành tin cậy; mỗi hệ điều hành sẽ cảnh báo một lần.</p>
+    <p><strong>Windows 11 22H2+</strong>: tải chứng chỉ và file <code>.msix</code>. Tin cậy chứng chỉ một lần trong PowerShell <strong>chạy bằng quyền Administrator</strong>:<br>
+      <code>Import-Certificate -FilePath .\ViberVN-signing.cer -CertStoreLocation Cert:\LocalMachine\TrustedPeople</code><br>
+      rồi mở file <code>.msix</code> và chọn Install.</p>
+    <p><strong>macOS 13+</strong>: mở file <code>.dmg</code> và kéo ứng dụng vào Applications. Lần đầu macOS sẽ chặn: vào System Settings → Privacy &amp; Security → Open Anyway, hoặc chạy<br>
+      <code>xattr -dr com.apple.quarantine "/Applications/ViberVN Bot.app"</code><br>
+      Nếu vẫn báo ứng dụng bị hỏng, tự ký một lần:<br>
+      <code>codesign --force --deep --sign - "/Applications/ViberVN Bot.app"</code></p>
+    <p><strong>Linux</strong>: <code>chmod +x</code> file <code>.AppImage</code> đúng kiến trúc rồi chạy nó.</p>
+  </section>
+
+  <section>
+    <h2 id="update">Cập nhật và cài lại</h2>
+    <p>Tải bản mới ở trên và cài đè lên bản cũ; dữ liệu và cấu hình của bạn được giữ nguyên. Nếu ứng dụng báo thiếu hoặc hỏng runtime, cài lại từ trang này.</p>
+  </section>
+
+  <footer>ViberVN Bot</footer>
+</main>
+</body>
+</html>

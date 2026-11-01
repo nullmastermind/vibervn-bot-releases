@@ -1,0 +1,19 @@
+{
+  "rewrites": [{ "source": "/download/:platform", "destination": "/api/download?platform=:platform" }],
+  "headers": [
+    {
+      "source": "/feeds/(.*)",
+      "headers": [
+        { "key": "cache-control", "value": "public, max-age=300, s-maxage=300" },
+        { "key": "access-control-allow-origin", "value": "*" }
+      ]
+    },
+    {
+      "source": "/oauth/(.*)",
+      "headers": [
+        { "key": "cache-control", "value": "public, max-age=3600" },
+        { "key": "access-control-allow-origin", "value": "*" }
+      ]
+    }
+  ]
+}

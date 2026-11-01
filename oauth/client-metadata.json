@@ -1,7 +1,7 @@
 {
-  "client_id": "https://raw.githubusercontent.com/nullmastermind/vibervn-bot-releases/main/oauth/client-metadata.json",
+  "client_id": "https://get.viber.vn/oauth/client-metadata.json",
   "client_name": "ViberVN Bot",
-  "client_uri": "https://github.com/nullmastermind/vibervn-bot-releases",
+  "client_uri": "https://get.viber.vn",
   "application_type": "native",
   "grant_types": [
     "authorization_code",
